@@ -123,6 +123,102 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/26b737045a0bbcda518310eaebd57a2dca2acb1c840d3344ee7e1115050bdfe9_Male Suit.glb",
           "name": "Male Suit.glb"
         }
+      },
+      {
+        "file": "assets/New3DBox_Front.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Front",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Back.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Back",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Left.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Left",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Right.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Right",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Top.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Top",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Bottom.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Bottom",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Front2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Front2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Back2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Back2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Left2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Left2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Right2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Right2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Top2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Top2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/New3DBox_Bottom2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New3DBox_Bottom2",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -144,6 +240,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/physicscharacter3dkeymapper"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/mousepointerlock"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

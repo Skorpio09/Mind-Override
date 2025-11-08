@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.4163025217733325,
+    "zoomFactor": 0.5995738389111079,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -33,12 +33,43 @@
       "layer": "",
       "name": "Player",
       "persistentUuid": "ea6a76c5-8947-4f52-8569-fed0e27064ae",
-      "rotationX": 90,
-      "rotationY": 90,
       "width": 0,
-      "x": 713,
-      "y": 507,
+      "x": 800,
+      "y": 300,
       "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Swat",
+      "persistentUuid": "72aa572d-4c8b-43cf-9840-78cf45654a66",
+      "width": 0,
+      "x": 1632,
+      "y": 414,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Camera",
+      "persistentUuid": "9ab2caa6-3599-4045-a4bc-711910b8ad17",
+      "width": 0,
+      "x": 450,
+      "y": 300,
+      "z": 100,
+      "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -343,12 +374,43 @@
       "type": "Scene3D::Model3DObject",
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "ThirdPersonCamera",
+          "type": "ThirdPersonCamera::ThirdPersonCamera",
+          "Object3D": "Object3D",
+          "RotationHalfwayDuration": 0.125,
+          "ElevationHalfwayDuration": 0,
+          "TranslationZHalfwayDuration": 0.125,
+          "Distance": 1000,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "OffsetZ": 0,
+          "RotationAngleOffset": 0,
+          "ElevationAngleOffset": 20,
+          "FollowFreeAreaZMax": 0,
+          "FollowFreeAreaZMin": 0,
+          "RotationLogSpeed": 2.0247e-320,
+          "ElevationLogSpeed": 2.0247e-320,
+          "TranslationZLogSpeed": 2.0247e-320,
+          "IsCalledManually": false,
+          "CameraZ": 0,
+          "HasJustBeenCreated": true,
+          "IsRotatingWithObject": true,
+          "IsElevatingWithObject": false,
+          "RotationMode": "Z",
+          "TargetedRotationAngle": 0,
+          "TargetedElevationAngle": 0,
+          "ForwardX": 0,
+          "ForwardY": 0,
+          "ForwardZ": 0
+        }
+      ],
       "content": {
         "centerLocation": "ModelOrigin",
         "crossfadeDuration": 0.10000000149011612,
-        "depth": 143,
-        "height": 143,
+        "depth": 143.0001639469252,
+        "height": 135.40088247051636,
         "isCastingShadow": true,
         "isReceivingShadow": true,
         "keepAspectRatio": true,
@@ -358,7 +420,7 @@
         "rotationX": 90,
         "rotationY": 0,
         "rotationZ": 90,
-        "width": 143,
+        "width": 28.614693506666317,
         "animations": [
           {
             "loop": true,
@@ -482,6 +544,44 @@
           }
         ]
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "Camera",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "width": 100,
+        "height": 100,
+        "depth": 100,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "New3DBox_Front2",
+        "backFaceResourceName": "New3DBox_Back2",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "New3DBox_Left2",
+        "rightFaceResourceName": "New3DBox_Right2",
+        "topFaceResourceName": "New3DBox_Top2",
+        "bottomFaceResourceName": "New3DBox_Bottom2",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": false,
+        "backFaceResourceRepeat": false,
+        "leftFaceResourceRepeat": false,
+        "rightFaceResourceRepeat": false,
+        "topFaceResourceRepeat": false,
+        "bottomFaceResourceRepeat": false,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": true,
+        "isReceivingShadow": true
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -495,6 +595,9 @@
       },
       {
         "objectName": "Swat"
+      },
+      {
+        "objectName": "Camera"
       }
     ]
   },
@@ -504,7 +607,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Movment",
+      "name": "Player Movement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -524,13 +627,12 @@
           "actions": [
             {
               "type": {
-                "value": "Scene3D::Base3DBehavior::SetCenterZ"
+                "value": "SetCenterX"
               },
               "parameters": [
                 "Player",
-                "Object3D",
-                "-",
-                "3"
+                "+",
+                "+3"
               ]
             }
           ]
@@ -551,7 +653,7 @@
           "actions": [
             {
               "type": {
-                "value": "MettreX"
+                "value": "MettreY"
               },
               "parameters": [
                 "Player",
@@ -577,13 +679,12 @@
           "actions": [
             {
               "type": {
-                "value": "Scene3D::Base3DBehavior::SetCenterZ"
+                "value": "SetCenterX"
               },
               "parameters": [
                 "Player",
-                "Object3D",
-                "+",
-                "3"
+                "-",
+                "+3"
               ]
             }
           ]
@@ -604,7 +705,7 @@
           "actions": [
             {
               "type": {
-                "value": "MettreX"
+                "value": "MettreY"
               },
               "parameters": [
                 "Player",
@@ -613,27 +714,128 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene3D::TurnCameraTowardObject"
-              },
-              "parameters": [
-                "",
-                "Player",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
         }
       ],
       "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Camera"
+          ]
+        },
+        {
+          "type": {
+            "value": "FirstPersonCamera::LookFrom3DObjectEyes"
+          },
+          "parameters": [
+            "",
+            "Camera",
+            "Object3D",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene3D::Base3DBehavior::SetRotationY"
+          },
+          "parameters": [
+            "Camera",
+            "Object3D",
+            "=",
+            "clamp(Camera.RotationY(), -90, 90)"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreY"
+          },
+          "parameters": [
+            "Camera",
+            "=",
+            "Player.Y()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Left\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "MousePointerLock::isPointerLocked"
+          },
+          "parameters": [
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "MousePointerLock::RequestPointerLock"
+          },
+          "parameters": [
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MousePointerLock::isPointerLocked"
+          },
+          "parameters": [
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetAngle"
+          },
+          "parameters": [
+            "Camera",
+            "+",
+            "MousePointerLock::MovementX() / 20"
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene3D::Base3DBehavior::SetRotationY"
+          },
+          "parameters": [
+            "Camera",
+            "Object3D",
+            "+",
+            "MousePointerLock::MovementY() / 20"
+          ]
+        }
+      ]
     }
   ],
   "layers": [
@@ -702,5 +904,30 @@
       ]
     }
   ],
-  "behaviorsSharedData": []
+  "behaviorsSharedData": [
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "Object3D",
+      "type": "Scene3D::Base3DBehavior"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "ThirdPersonCamera",
+      "type": "ThirdPersonCamera::ThirdPersonCamera"
+    }
+  ]
 }
