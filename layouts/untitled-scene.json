@@ -31,11 +31,13 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "Swat",
-      "persistentUuid": "920d0866-4cd7-4fc5-aeb5-35ba193acdad",
+      "name": "Player",
+      "persistentUuid": "ea6a76c5-8947-4f52-8569-fed0e27064ae",
+      "rotationX": 90,
+      "rotationY": 90,
       "width": 0,
-      "x": 1023,
-      "y": 455,
+      "x": 713,
+      "y": 507,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -334,6 +336,152 @@
           }
         ]
       }
+    },
+    {
+      "assetStoreId": "f64e8a7c3f4b92a6f9149cc5ed6bd4ee12014258c47a9e5cc58b39eca841bd60",
+      "name": "Player",
+      "type": "Scene3D::Model3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0.10000000149011612,
+        "depth": 143,
+        "height": 143,
+        "isCastingShadow": true,
+        "isReceivingShadow": true,
+        "keepAspectRatio": true,
+        "materialType": "StandardWithoutMetalness",
+        "modelResourceName": "Male Suit.glb",
+        "originLocation": "ModelOrigin",
+        "rotationX": 90,
+        "rotationY": 0,
+        "rotationZ": 90,
+        "width": 143,
+        "animations": [
+          {
+            "loop": true,
+            "name": "Idle",
+            "source": "Idle"
+          },
+          {
+            "loop": true,
+            "name": "Walk",
+            "source": "Walk"
+          },
+          {
+            "loop": true,
+            "name": "Run",
+            "source": "Run"
+          },
+          {
+            "loop": false,
+            "name": "Death",
+            "source": "Death"
+          },
+          {
+            "loop": false,
+            "name": "GunShoot",
+            "source": "Gun_Shoot"
+          },
+          {
+            "loop": false,
+            "name": "HitRecieve2",
+            "source": "HitRecieve_2"
+          },
+          {
+            "loop": false,
+            "name": "HitRecieve",
+            "source": "HitRecieve"
+          },
+          {
+            "loop": true,
+            "name": "IdleGun",
+            "source": "Idle_Gun"
+          },
+          {
+            "loop": true,
+            "name": "IdleGunPointing",
+            "source": "Idle_Gun_Pointing"
+          },
+          {
+            "loop": false,
+            "name": "IdleGunShoot",
+            "source": "Idle_Gun_Shoot"
+          },
+          {
+            "loop": true,
+            "name": "IdleNeutral",
+            "source": "Idle_Neutral"
+          },
+          {
+            "loop": true,
+            "name": "IdleSword",
+            "source": "Idle_Sword"
+          },
+          {
+            "loop": false,
+            "name": "Interact",
+            "source": "Interact"
+          },
+          {
+            "loop": false,
+            "name": "KickLeft",
+            "source": "Kick_Left"
+          },
+          {
+            "loop": false,
+            "name": "KickRight",
+            "source": "Kick_Right"
+          },
+          {
+            "loop": false,
+            "name": "PunchLeft",
+            "source": "Punch_Left"
+          },
+          {
+            "loop": false,
+            "name": "PunchRight",
+            "source": "Punch_Right"
+          },
+          {
+            "loop": false,
+            "name": "Roll",
+            "source": "Roll"
+          },
+          {
+            "loop": true,
+            "name": "RunBack",
+            "source": "Run_Back"
+          },
+          {
+            "loop": true,
+            "name": "RunLeft",
+            "source": "Run_Left"
+          },
+          {
+            "loop": true,
+            "name": "RunRight",
+            "source": "Run_Right"
+          },
+          {
+            "loop": false,
+            "name": "RunShoot",
+            "source": "Run_Shoot"
+          },
+          {
+            "loop": false,
+            "name": "SwordSlash",
+            "source": "Sword_Slash"
+          },
+          {
+            "loop": false,
+            "name": "Wave",
+            "source": "Wave"
+          }
+        ]
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -343,11 +491,43 @@
         "objectName": "Femal_Soldier"
       },
       {
+        "objectName": "Player"
+      },
+      {
         "objectName": "Swat"
       }
     ]
   },
-  "events": [],
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "Player",
+            "\"d\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "Player",
+            "+",
+            "1",
+            "+",
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
   "layers": [
     {
       "ambientLightColorB": 200,

@@ -112,6 +112,17 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/f0ea6116fa052a799bed9ed1901513e9014d163214d84a3ccbd99aad1e93a4f3_Swat.glb",
           "name": "Swat.glb"
         }
+      },
+      {
+        "file": "assets/Male Suit.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Male Suit.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/26b737045a0bbcda518310eaebd57a2dca2acb1c840d3344ee7e1115050bdfe9_Male Suit.glb",
+          "name": "Male Suit.glb"
+        }
       }
     ],
     "resourceFolders": []
