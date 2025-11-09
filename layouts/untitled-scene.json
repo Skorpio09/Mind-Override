@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5995738389111079,
+    "zoomFactor": 0.41630252177333277,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -70,6 +70,39 @@
       "y": 300,
       "z": 100,
       "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Camera_Pivot",
+      "persistentUuid": "08121f42-0932-4516-a832-9bc39c85e120",
+      "width": 0,
+      "x": 757,
+      "y": 255,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 100,
+      "height": 1092,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ground",
+      "persistentUuid": "b9eeadbf-3325-4f70-8ad0-1a8a75dd6b79",
+      "width": 1904,
+      "x": 68,
+      "y": 30,
+      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -376,6 +409,74 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "FirstPersonPointerMapper",
+          "type": "MousePointerLock::FirstPersonPointerMapper",
+          "Object3D": "Object3D",
+          "HorizontalSpeed": 200,
+          "VerticalSpeed": 100,
+          "VerticalAngleMin": -90,
+          "VerticalAngleMax": 90,
+          "OffsetZ": 0,
+          "ShouldLock": true
+        },
+        {
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeDimensionC": 0,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 0,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": 0,
+          "massOverride": 0,
+          "density": 1,
+          "friction": 0.3,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 17,
+          "masks": 17
+        },
+        {
+          "name": "PhysicsCharacter3D",
+          "type": "Physics3D::PhysicsCharacter3D",
+          "physics3D": "Physics3D",
+          "jumpHeight": 200,
+          "jumpSustainTime": 0.2,
+          "gravity": 1000,
+          "fallingSpeedMax": 700,
+          "forwardAcceleration": 1200,
+          "forwardDeceleration": 1200,
+          "forwardSpeedMax": 600,
+          "sidewaysAcceleration": 800,
+          "sidewaysDeceleration": 800,
+          "sidewaysSpeedMax": 400,
+          "slopeMaxAngle": 50,
+          "stairHeightMax": 20,
+          "shouldBindObjectAndForwardAngle": true,
+          "canBePushed": true
+        },
+        {
+          "name": "Shooter3DKeyboardMapper",
+          "type": "PhysicsCharacter3DKeyMapper::Shooter3DKeyboardMapper",
+          "PhysicsCharacter3D": "PhysicsCharacter3D",
+          "Jump": "Space",
+          "Up": "w",
+          "Left": "a",
+          "Down": "s",
+          "Right": "d"
+        },
+        {
           "name": "ThirdPersonCamera",
           "type": "ThirdPersonCamera::ThirdPersonCamera",
           "Object3D": "Object3D",
@@ -582,6 +683,82 @@
         "isCastingShadow": true,
         "isReceivingShadow": true
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "Camera_Pivot",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "width": 100,
+        "height": 100,
+        "depth": 100,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "New3DBox_Top2",
+        "backFaceResourceName": "New3DBox_Top2",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "New3DBox_Top2",
+        "rightFaceResourceName": "New3DBox_Top2",
+        "topFaceResourceName": "New3DBox_Top2",
+        "bottomFaceResourceName": "New3DBox_Top2",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": false,
+        "backFaceResourceRepeat": false,
+        "leftFaceResourceRepeat": false,
+        "rightFaceResourceRepeat": false,
+        "topFaceResourceRepeat": false,
+        "bottomFaceResourceRepeat": false,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": true,
+        "isReceivingShadow": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "ground",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "width": 100,
+        "height": 100,
+        "depth": 100,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "New3DBox_Top2",
+        "backFaceResourceName": "",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "",
+        "rightFaceResourceName": "",
+        "topFaceResourceName": "",
+        "bottomFaceResourceName": "",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": false,
+        "backFaceResourceRepeat": false,
+        "leftFaceResourceRepeat": false,
+        "rightFaceResourceRepeat": false,
+        "topFaceResourceRepeat": false,
+        "bottomFaceResourceRepeat": false,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": true,
+        "isReceivingShadow": true
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -598,10 +775,41 @@
       },
       {
         "objectName": "Camera"
+      },
+      {
+        "objectName": "Camera_Pivot"
+      },
+      {
+        "objectName": "ground"
       }
     ]
   },
   "events": [
+    {
+      "aiGeneratedEventId": "01K9MDHM6BTWQN2A6A4AB46G7E",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "MousePointerLock::RequestPointerLock"
+          },
+          "parameters": [
+            "",
+            ""
+          ]
+        }
+      ]
+    },
     {
       "colorB": 228,
       "colorG": 176,
@@ -632,7 +840,18 @@
               "parameters": [
                 "Player",
                 "+",
-                "+3"
+                "+cos(ToRad(Camera_Pivot.Object3D::RotationY()))*200 *TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetCenterZ"
+              },
+              "parameters": [
+                "Player",
+                "Object3D",
+                "+",
+                "+sin(ToRad(Camera_Pivot.Object3D::RotationY()))*200 *TimeDelta()"
               ]
             }
           ]
@@ -653,12 +872,23 @@
           "actions": [
             {
               "type": {
-                "value": "MettreY"
+                "value": "SetCenterX"
               },
               "parameters": [
                 "Player",
-                "-",
-                "3"
+                "+",
+                "-cos(ToRad(Camera_Pivot.Object3D::RotationY()-90)) * 200 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetCenterZ"
+              },
+              "parameters": [
+                "Player",
+                "Object3D",
+                "+",
+                "sin(ToRad(Camera_Pivot.Object3D::RotationY()-90)) * 200 * TimeDelta()"
               ]
             }
           ]
@@ -684,7 +914,18 @@
               "parameters": [
                 "Player",
                 "-",
-                "+3"
+                "+cos(ToRad(Camera_Pivot.Object3D::RotationY()))*200 *TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetCenterZ"
+              },
+              "parameters": [
+                "Player",
+                "Object3D",
+                "-",
+                "+sin(ToRad(Camera_Pivot.Object3D::RotationY()))*200 *TimeDelta()"
               ]
             }
           ]
@@ -705,12 +946,23 @@
           "actions": [
             {
               "type": {
-                "value": "MettreY"
+                "value": "SetCenterX"
               },
               "parameters": [
                 "Player",
                 "+",
-                "3"
+                "cos(ToRad(Camera_Pivot.Object3D::RotationY()+90)) * 200 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetCenterZ"
+              },
+              "parameters": [
+                "Player",
+                "Object3D",
+                "+",
+                "-sin(ToRad(Camera_Pivot.Object3D::RotationY()+90)) * 200 * TimeDelta()"
               ]
             }
           ]
@@ -719,123 +971,214 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Camera Movement",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "Camera"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "MousePointerLock::isPointerLocked"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MousePointerLock::RequestPointerLock"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "FirstPersonCamera::LookFrom3DObjectEyes"
-          },
-          "parameters": [
-            "",
-            "Camera",
-            "Object3D",
-            "",
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MousePointerLock::isPointerLocked"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetRotationY"
+              },
+              "parameters": [
+                "Camera_Pivot",
+                "Object3D",
+                "+",
+                "MousePointerLock::MovementX() / 20"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetRotationX"
+              },
+              "parameters": [
+                "Camera_Pivot",
+                "Object3D",
+                "-",
+                "MousePointerLock::MovementX() / 20"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetRotationX"
+              },
+              "parameters": [
+                "Camera_Pivot",
+                "Object3D",
+                "=",
+                "clamp(Camera_Pivot.RotationX(), -45, 45)"
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "Scene3D::Base3DBehavior::SetRotationY"
-          },
-          "parameters": [
-            "Camera",
-            "Object3D",
-            "=",
-            "clamp(Camera.RotationY(), -90, 90)"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Camera"
+              ]
+            },
+            {
+              "type": {
+                "value": "FirstPersonCamera::LookFrom3DObjectEyes"
+              },
+              "parameters": [
+                "",
+                "Camera",
+                "Object3D",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Camera",
+                "=",
+                "Camera_Pivot.Y() + 150"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Camera",
+                "=",
+                "Camera_Pivot.X() - cos(ToRad(Camera_Pivot.RotationY())) * 300"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetZ"
+              },
+              "parameters": [
+                "Camera",
+                "Object3D",
+                "=",
+                "Camera_Pivot.Z() - sin(ToRad(Camera_Pivot.RotationY())) * 300"
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "Camera",
+                "Player.X()",
+                "Player.Y() + 80",
+                "0",
+                ""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "MettreY"
-          },
-          "parameters": [
-            "Camera",
-            "=",
-            "Player.Y()"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "MouseButtonFromTextReleased"
-          },
-          "parameters": [
-            "",
-            "\"Left\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "MousePointerLock::isPointerLocked"
-          },
-          "parameters": [
-            "",
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Camera_Pivot"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Camera_Pivot",
+                "=",
+                "Camera_Pivot.X() + (Player.X() - Camera_Pivot.X()) * 0.15"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Camera_Pivot",
+                "=",
+                " Player.Y() + 80"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetZ"
+              },
+              "parameters": [
+                "Camera_Pivot",
+                "Object3D",
+                "=",
+                "Camera_Pivot.Z() + (Player.Z() - Camera_Pivot.Z()) * 0.15"
+              ]
+            }
           ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "MousePointerLock::RequestPointerLock"
-          },
-          "parameters": [
-            "",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "MousePointerLock::isPointerLocked"
-          },
-          "parameters": [
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "Camera",
-            "+",
-            "MousePointerLock::MovementX() / 20"
-          ]
-        },
-        {
-          "type": {
-            "value": "Scene3D::Base3DBehavior::SetRotationY"
-          },
-          "parameters": [
-            "Camera",
-            "Object3D",
-            "+",
-            "MousePointerLock::MovementY() / 20"
-          ]
-        }
-      ]
+      "parameters": []
     }
   ],
   "layers": [
@@ -910,6 +1253,10 @@
       "type": "AnimatableCapability::AnimatableBehavior"
     },
     {
+      "name": "FirstPersonPointerMapper",
+      "type": "MousePointerLock::FirstPersonPointerMapper"
+    },
+    {
       "name": "Flippable",
       "type": "FlippableCapability::FlippableBehavior"
     },
@@ -918,12 +1265,28 @@
       "type": "Scene3D::Base3DBehavior"
     },
     {
+      "name": "Physics3D",
+      "type": "Physics3D::Physics3DBehavior",
+      "gravityX": 0,
+      "gravityY": 0,
+      "gravityZ": -9.8,
+      "worldScale": 100
+    },
+    {
+      "name": "PhysicsCharacter3D",
+      "type": "Physics3D::PhysicsCharacter3D"
+    },
+    {
       "name": "Resizable",
       "type": "ResizableCapability::ResizableBehavior"
     },
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Shooter3DKeyboardMapper",
+      "type": "PhysicsCharacter3DKeyMapper::Shooter3DKeyboardMapper"
     },
     {
       "name": "ThirdPersonCamera",
