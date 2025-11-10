@@ -219,6 +219,64 @@
         "name": "New3DBox_Bottom2",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/Pickup Bullets.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Pickup Bullets.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Space Station/Collectable/9139bd88b6be35d4e3b26a652d99edb674123c11dcffe981c14ee8105013cbb3_Pickup Bullets.glb",
+          "name": "Pickup Bullets.glb"
+        }
+      },
+      {
+        "file": "assets/Rocket Launcher.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Rocket Launcher.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Toon Shooter/Weapon/3021810000a463858f725adc687a84ae79b0672bf7bb11c108fe7e26a7538280_Rocket Launcher.glb",
+          "name": "Rocket Launcher.glb"
+        }
+      },
+      {
+        "file": "assets/floor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "floor.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Cubes/e7eab183f37146e212ba6c7b19e0a3dcf842cba7d2502def586d1dc92a58951e_floor.png",
+          "name": "floor.png"
+        }
+      },
+      {
+        "file": "assets/wall128x128.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wall128x128.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Cubes/6fb26581052344f417d02f24e5fa5146fb3dbf1639da5086fbf0f69234458599_wall128x128.png",
+          "name": "wall128x128.png"
+        }
+      },
+      {
+        "file": "assets/BrownSand512.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "BrownSand512.jpg",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Cubes/7bd11dd2e67b605e5ec2195b01c49c348f24aa3cb690c112abbdcdf87d6eaa4a_BrownSand512.jpg",
+          "name": "BrownSand512.jpg"
+        }
       }
     ],
     "resourceFolders": []
@@ -248,6 +306,18 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/thirdpersoncamera"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/firebullet"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/health"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/sticker"
     }
   ],
   "externalLayouts": []
